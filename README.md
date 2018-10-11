@@ -1,2 +1,2 @@
 # 6212
-Project source code repository
+Project source code repository.
