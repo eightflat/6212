@@ -1,7 +1,7 @@
 import java.util.Random;
  
-public class project2
-{
+public class project2 {
+ 
     public static void main(String[] args) {
         int[] nValues={4,8,16,32,64,128,256,512,1024,2048,4096};
         Random RNG=new Random();
@@ -106,5 +106,6 @@ public class project2
         for(int i1=0,i2=iB; i1<C.length; i1++,i2++)
             for(int j1=0,j2=jB; j1<C.length; j1++,j2++)
                 P[i2][j2]=C[i1][j1];
-    }    
+    }
+ 
 }
