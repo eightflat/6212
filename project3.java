@@ -17,7 +17,7 @@ class project3 {
         } 
        
         int index=length[n1][n2];
-        int placeholder=index; // used for detailed output
+        int placeholder=index; // used for detailed output block below...
         char[] output=new char[index+1];
         
         int i=n1,j=n2; // initialize output with length of strings
@@ -35,7 +35,7 @@ class project3 {
                 j--; 
         } 
         
-        /* detailed output, commented out to reduce overhead
+        /* detailed output showing strings being compared and LCS string + number of characters
         System.out.println("String: "+a);
         System.out.println("String: "+b);
         System.out.print("Longest Common Subsequence: ");
@@ -46,22 +46,22 @@ class project3 {
         */
     } 
     public static void main (String[] args) { 
-        int stringBegin = 97; 
-        int stringEnd = 122;
+        int stringBegin = 97; // a to...
+        int stringEnd = 122; // z
         
         int[] nValues={4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384};
         for (int index=0;index<nValues.length;index++) {
             int length = nValues[index];
             Random random = new Random();
 
-            StringBuilder aGenerator = new StringBuilder(length); // generates first character string using "a-z" at random
+            StringBuilder aGenerator = new StringBuilder(length); // generates first character string randomly
             for (int i=0;i<length;i++) {
                 int randomLimitedInt=stringBegin+(int)(random.nextFloat()*(stringEnd-stringBegin+1));
                 aGenerator.append((char) randomLimitedInt);
             }
             String first = aGenerator.toString();
 
-            StringBuilder bGenerator = new StringBuilder(length); // generates second character string using "a-z" at random
+            StringBuilder bGenerator = new StringBuilder(length); // generates second character string randomly
             for (int i=0;i<length;i++) {
                 int randomLimitedInt=stringBegin+(int)(random.nextFloat()*(stringEnd-stringBegin+1));
                 bGenerator.append((char) randomLimitedInt);
@@ -74,7 +74,7 @@ class project3 {
             int n2 = b.length(); 
 
             long startTimer=System.nanoTime();
-            longestCommonSubsequence(a,b,n1,n2); // dynamic programming solution to be timed
+            longestCommonSubsequence(a,b,n1,n2); // timed dynamic programming method
             long endTimer=System.nanoTime();
             long duration=endTimer-startTimer;
             System.out.println("n1n2: "+length*length);
